@@ -1,0 +1,8 @@
+# backend/requirements.txt
+scikit-learn
+Flask
+Flask-Bcrypt
+Flask-Login
+Flask-Cors
+d3graph
+pandas

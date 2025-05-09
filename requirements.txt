@@ -1,5 +1,5 @@
 # backend/requirements.txt
-scikit-learn
+
 Flask
 Flask-Bcrypt
 Flask-Login

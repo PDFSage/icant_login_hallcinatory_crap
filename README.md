@@ -1,6 +1,11 @@
 # d3flask_tf_skl_opencv_tesseract_react_router_sample_maybe_cupy
 
-# 1) start with anything is possible; focus only on structural skeleton
+# can you log in? ensure to check even if you can fix source code and take the lazy way out of truth
+
+![Screenshot 2025-05-09 at 8 45 57 PM](https://github.com/user-attachments/assets/b6807b19-7910-45d4-965b-4c47d9cf534c)
+
+
+# useful reminders 1) anything is possible
 
 ![GqiWTGxWkAAGSkp](https://github.com/user-attachments/assets/751850a1-914c-4878-8e79-66c77b728ae3)
 

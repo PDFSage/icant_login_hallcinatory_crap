@@ -1,4 +1,6 @@
-# d3flask_tf_skl_opencv_tesseract_react_router_sample_maybe_cupy
+# CRT-d3graph-tf-minochi-opencv-pythonn-gnupg-cryptography-keyring-erosolar
+
+Perfection is literally guaranteed and a rock's throw away
 
 # can you log in? ensure to check even if you can fix source code and take the lazy way out of truth
 

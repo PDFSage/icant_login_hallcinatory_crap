@@ -4,5 +4,5 @@ Flask
 Flask-Bcrypt
 Flask-Login
 Flask-Cors
-
+cupy
 pandas

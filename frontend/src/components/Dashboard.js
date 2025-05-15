@@ -1,4 +1,4 @@
-// frontend/src/components/Dashboard.js
+/* frontend/src/components/Dashboard.js */
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
@@ -12,40 +12,29 @@ export default function Dashboard() {
   const [credentials, setCredentials] = useState([])
   const [credType, setCredType] = useState('')
   const [credValue, setCredValue] = useState('')
-
   const handleLogout = async () => {
-    await axios.post('/api/logout', {}, { withCredentials: true })
+    await axios.post('/api/logout', {}, { withCredentials: true, headers: { 'Cache-Control': 'no-cache' } })
     navigate('/login')
   }
-
   const getDocs = async () => {
-    const res = await axios.get('/api/docs', { withCredentials: true })
+    const res = await axios.get('/api/docs', { withCredentials: true, headers: { 'Cache-Control': 'no-cache' } })
     setDocs(res.data.docs)
   }
-
   const uploadFile = async e => {
     e.preventDefault()
     if (!file) return
     const formData = new FormData()
     formData.append('file', file)
-    try {
-      await axios.post('/api/upload', formData, { withCredentials: true })
-      getDocs()
-    } catch {
-      alert('Upload failed')
-    }
+    await axios.post('/api/upload', formData, { withCredentials: true, headers: { 'Cache-Control': 'no-cache' } })
+    getDocs()
   }
-
   const getLeakRisk = async () => {
-    try {
-      const res = await axios.get('/api/leak_risk', { withCredentials: true })
-      setRisk(res.data.risk || {})
-    } catch {}
+    const res = await axios.get('/api/leak_risk', { withCredentials: true, headers: { 'Cache-Control': 'no-cache' } })
+    setRisk(res.data.risk || {})
   }
-
   const checkAdmin = async () => {
     try {
-      const r = await axios.get('/api/leak_risk', { withCredentials: true })
+      const r = await axios.get('/api/leak_risk', { withCredentials: true, headers: { 'Cache-Control': 'no-cache' } })
       if (r.data && r.data.risk) {
         setIsAdmin(true)
         setRisk(r.data.risk)
@@ -54,33 +43,25 @@ export default function Dashboard() {
       setIsAdmin(false)
     }
   }
-
   const getCredentialsList = async () => {
-    try {
-      const r = await axios.get('/api/get_credentials', { withCredentials: true })
-      setCredentials(r.data.credentials || [])
-    } catch {}
+    const r = await axios.get('/api/get_credentials', { withCredentials: true, headers: { 'Cache-Control': 'no-cache' } })
+    setCredentials(r.data.credentials || [])
   }
-
   const addCredential = async e => {
     e.preventDefault()
-    try {
-      await axios.post('/api/add_credential', { type: credType, value: credValue }, { withCredentials: true })
-      setCredType('')
-      setCredValue('')
-      getCredentialsList()
-    } catch {}
+    await axios.post('/api/add_credential', { type: credType, value: credValue }, { withCredentials: true, headers: { 'Cache-Control': 'no-cache' } })
+    setCredType('')
+    setCredValue('')
+    getCredentialsList()
   }
-
   useEffect(() => {
-    (async () => {
-      await axios.get('/api/graph', { credentials: 'include' })
+    ;(async () => {
+      await axios.get('/api/graph', { withCredentials: true, headers: { 'Cache-Control': 'no-cache' } })
     })()
     getDocs()
     checkAdmin()
     getCredentialsList()
   }, [])
-
   return (
     <div className="dashboard-container">
       <h1>Federal Top Secret Dashboard</h1>

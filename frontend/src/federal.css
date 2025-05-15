@@ -1,42 +1,42 @@
-/* frontend/src/federal.css */
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
-  }
-  .federal-banner {
-    background-color: #0a2f5a;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  .login-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: 1px solid #ccc;
-    background: #fff;
-  }
-  input {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-  }
-  button {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    background-color: #0a2f5a;
-    color: #fff;
-    border: none;
-  }
-  .dashboard-container {
-    padding: 1rem;
-  }
-  .docs-list {
-    margin-top: 1rem;
-  }
-  .credentials-list {
-    margin-top: 1rem;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+.federal-banner {
+  background-color: #0a2f5a;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #0a2f5a;
+  color: #fff;
+  border: none;
+}
+.dashboard-container {
+  padding: 1rem;
+}
+.docs-list {
+  margin-top: 1rem;
+}
+.credentials-list {
+  margin-top: 1rem;
+}
